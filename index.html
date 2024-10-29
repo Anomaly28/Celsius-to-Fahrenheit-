@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Temperature Converter</title>
+<style>
+* { font-size: 40px; }
+body { background-color: azure; }
+</style>
+</head>
+<body>
+<center>
+<h1>Temperature Converter</h1>
+<form>
+    <label>°C</label>
+    <input type="number" id="celcius" placeholder="Temperature in celcius" />
+    <br/><br/>
+    <label>F</label>
+    <input type="number" id="fahrenheit" placeholder="Temperature in fahrenheit" />
+    <br/><br/>
+</form>
+<script>
+let celcius = document.getElementById("celcius");
+let fahrenheit = document.getElementById("fahrenheit");
+celcius.addEventListener("input", function() {
+    let c = parseFloat(celcius.value);
+    let f = c * (9/5) + 32;
+    fahrenheit.value = f.toFixed(2);
+});
+</script>
+</center>
+</body>
+</html>
